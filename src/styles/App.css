@@ -1,38 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+:root {
+  --primary-color: black;
+  --secundary-color: rgb(29,208,93);
+}
 .App {
   text-align: center;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.body{
+  background-color: var(--primary-color);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.div-logo{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+}
+.logo{
+  min-width: 400px;
+  width: 50%;
+  height: auto;
+ 
+
+}
+.header{
+  background-color: var(--secundary-color);
+  padding:auto;
+  height:60px;
+  text-align: center;
+  font-size: 30px ;
+  font-family: 'Luckiest Guy', cursive;
+}
+.footer{  position:absolute;
+   bottom:0;
+   width:100vw;
+   height:10%;   
+background-color:var(--secundary-color);
+text-align: center;
+font-size: 30px ;
+font-family: 'Luckiest Guy', cursive;
+
 }
 
-.App-link {
-  color: #61dafb;
+.button
+{
+  text-align: center;
+    font-size: 10px;
+    color:var(--secundary-color);
+    font-family: 'Luckiest Guy', cursive;
+   width: 100px;
+   height: auto;
+    padding-bottom: 5px;
+  
 }
+.div{
+  text-align: center;
+  margin-bottom: 80px;
+}
+.button:hover{
+  background-color: var(--secundary-color);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: var(--primary-color);
+}
+.body{
+  height: 100vh ;
+  position:relative;
+
 }
