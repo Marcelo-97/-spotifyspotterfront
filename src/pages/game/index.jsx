@@ -8,22 +8,26 @@ import axios from "axios";
 const Game = () => {
   
   const [genres, setGenres] = useState();
-
+  const [songs, setSongs] = useState();
     
-;  const fetchSongs = async () => {
-    setGenres( (await axios.get("http://localhost:3001/genres")).data);
+  const fetchGenres = async () => {
+    setGenres( await axios.get("http://localhost:3001/genres").data);
    }
   
  
   useEffect(() => {
     
-    fetchSongs();
+    fetchGenres();
     
   },[]);
 
+ const fetchSongs = async () => {
+      setSongs( await axios.get(`http://localhost:3001/songs?genre=${genres}&qtd=10`).data);
+     }
+
   useEffect(() => {
     
-    console.log(genres)
+   fetchSongs();
     
   },[genres]);
   return (
